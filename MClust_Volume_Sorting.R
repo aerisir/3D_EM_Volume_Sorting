@@ -16,11 +16,18 @@ dark_no_terms_mclust = Mclust(dark_no_terms, G=5) # If you want Mclust to return
 summary(light_terms_mclust)
 summary(dark_no_terms_mclust)
 
-# Mean and Standard Deviation
+# Mean, Variance, and Standard Deviation
 light_terms_mclust$parameters$mean
 light_terms_mclust$parameters$variance$sigmasq
+light_terms_variance <- light_terms_mclust$parameters$variance$sigmasq
+light_terms_sd <- sqrt(light_terms_variance)
+light_terms_sd
+
 dark_no_terms_mclust$parameters$mean
 dark_no_terms_mclust$parameters$variance$sigmasq
+dark_no_terms_variance <- dark_no_terms_mclust$parameters$variance$sigmasq
+dark_no_terms_sd <- sqrt(dark_no_terms_variance)
+dark_no_terms_sd
 
 # BIC of different models
 light_terms_mclust$BIC
