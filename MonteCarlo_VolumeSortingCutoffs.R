@@ -31,7 +31,7 @@ sp_mc_function <- function() {
 
 ### Replicate
 B <- 10000
-sf <- 5
+sf <- 10
 
 ## Create cutoff values for B replications.
 sp_cut_matrix <- matrix(nrow = B, ncol = volumes_G - 1)
